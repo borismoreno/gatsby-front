@@ -8,7 +8,7 @@ import SplitSection from '../components/SplitSection';
 import StatsBox from '../components/StatsBox';
 import customerData from '../data/customer-data';
 import FacturaImage from '../svg/FacturaImage';
-import HeroImage from '../svg/HeroImage';
+// import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
 
 const Index = () => (
@@ -35,7 +35,7 @@ const Index = () => (
     </section>
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold">Características</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">

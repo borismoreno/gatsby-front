@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <title>Factura Agil</title>
         <meta charSet="utf-8" />
+        <meta name="description" content="Emision comprobantes electronicos Ecuador."></meta>
       </Helmet>
       <Header />
         <main className="text-gray-900">{children}</main>

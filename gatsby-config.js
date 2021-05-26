@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.factura-agil.com`,
+    description: `Sitio para emitir facturas Ecuador`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

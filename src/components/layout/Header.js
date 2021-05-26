@@ -1,9 +1,14 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 
-const Header = () => (
+const Header = () => {
+  const handleClick = () => {
+    console.log('click');
+  }
+  return (
   <header className="sticky top-0 bg-white shadow">
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
       <div className="flex items-center text-2xl">
@@ -19,18 +24,27 @@ const Header = () => (
         <AnchorLink className="px-4" href="#services">
           Servicios
         </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
+        {/* <AnchorLink className="px-4" href="#stats">
           Estadísticas
-        </AnchorLink>
+        </AnchorLink> */}
         <AnchorLink className="px-4" href="#testimonials">
           Nuestros Clientes
         </AnchorLink>
+        <AnchorLink className="px-4" href="#contacto">
+          Contacto
+        </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+        <a className='bg-primary
+        hover:bg-primary-darker
+        hover:text-white
+        rounded
+        py-3 px-8
+        text-white' href='https://app.factura-agil.com/'>Iniciar sesión</a>
+        {/* <Button className="text-sm" onClick={handleClick}>Iniciar Sesión</Button> */}
       </div>
     </div>
   </header>
-);
+)};
 
 export default Header;

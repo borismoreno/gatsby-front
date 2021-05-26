@@ -1,13 +1,11 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoIcon from '../../svg/LogoIcon';
-import Button from '../Button';
 
 const Header = () => {
   return (
   <header className="sticky top-0 bg-white shadow">
-    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
+    <div className="container flex flex-col md:flex-row justify-between items-center mx-auto py-4 px-8">
       <div className="flex items-center text-2xl">
         <div className="w-12 mr-3">
           <LogoIcon />
@@ -15,30 +13,26 @@ const Header = () => {
         Factura Ágil
       </div>
       <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
+        <AnchorLink className="px-4 text-primary-darker" href="#features">
           Características
         </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
+        <AnchorLink className="px-4 text-primary-darker" href="#services">
           Servicios
         </AnchorLink>
-        {/* <AnchorLink className="px-4" href="#stats">
-          Estadísticas
-        </AnchorLink> */}
-        <AnchorLink className="px-4" href="#testimonials">
+        <AnchorLink className="px-4 text-primary-darker" href="#testimonials">
           Nuestros Clientes
         </AnchorLink>
-        <AnchorLink className="px-4" href="#contacto">
+        <AnchorLink className="px-4 text-primary-darker" href="#contacto">
           Contacto
         </AnchorLink>
       </div>
-      <div className="hidden md:block">
+      <div className="mt-4 sm:mt-0">
         <a className="bg-primary
         hover:bg-primary-darker
         hover:text-white
         rounded
         py-3 px-8
         text-white" href="https://app.factura-agil.com/">Iniciar sesión</a>
-        {/* <Button className="text-sm" onClick={handleClick}>Iniciar Sesión</Button> */}
       </div>
     </div>
   </header>

@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Factura Agil',
-    description: 'Sitio web emision comprobantes',
-    siteUrl: 'https://www.factura-agil.com'
+    siteUrl: `https://www.factura-agil.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-theme-codebushi`,
       options: {
@@ -16,7 +15,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.factura-agil.com',
-        sitemap: 'https://www.factura-agil.com/sitemap.xml',
+        sitemap: 'https://www.factura-agil.com/sitemap/sitemap-0.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
@@ -27,54 +26,6 @@ module.exports = {
           }
         }
       }
-    },
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        query: `
-        {
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-          allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
-            nodes {
-              ... on WpPost {
-                uri
-                modifiedGmt
-              }
-              ... on WpPage {
-                uri
-                modifiedGmt
-              }
-            }
-          }
-        }
-      `,
-        resolveSiteUrl: () => siteUrl,
-        resolvePages: ({
-          allSitePage: { nodes: allPages },
-          allWpContentNode: { nodes: allWpNodes },
-        }) => {
-          const wpNodeMap = allWpNodes.reduce((acc, node) => {
-            const { uri } = node
-            acc[uri] = node
-
-            return acc
-          }, {})
-
-          return allPages.map(page => {
-            return { ...page, ...wpNodeMap[page.path] }
-          })
-        },
-        serialize: ({ path, modifiedGmt }) => {
-          return {
-            url: path,
-            lastmod: modifiedGmt,
-          }
-        },
-      },
-    },
+    }
   ]
 };

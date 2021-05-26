@@ -5,9 +5,6 @@ import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 
 const Header = () => {
-  const handleClick = () => {
-    console.log('click');
-  }
   return (
   <header className="sticky top-0 bg-white shadow">
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
@@ -35,12 +32,12 @@ const Header = () => {
         </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <a className='bg-primary
+        <a className="bg-primary
         hover:bg-primary-darker
         hover:text-white
         rounded
         py-3 px-8
-        text-white' href='https://app.factura-agil.com/'>Iniciar sesión</a>
+        text-white" href="https://app.factura-agil.com/">Iniciar sesión</a>
         {/* <Button className="text-sm" onClick={handleClick}>Iniciar Sesión</Button> */}
       </div>
     </div>

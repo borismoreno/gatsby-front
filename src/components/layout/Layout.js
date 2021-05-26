@@ -6,7 +6,7 @@ import Helmet from 'react-helmet';
 const Layout = ({ children }) => {
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{lang:'es', translate:'no'}}>
         <title>Factura Agil</title>
         <meta charSet="utf-8" />
         <meta name="description" content="Emision comprobantes electronicos Ecuador."></meta>

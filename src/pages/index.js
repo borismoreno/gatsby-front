@@ -16,9 +16,18 @@ const Index = () => (
     <section className="pt-10 md:pt-20">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
+        <iframe
+          style={{
+            width: '120px',
+            height: '240px',
+          }}
+          src='//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=bm1984-20&marketplace=amazon&amp;region=US&placement=B09KY7BMXF&asins=B09KY7BMXF&linkId=a8a1ed0293739c614f7efebea9f08fa6&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff'
+
+        />
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
             Facturación Electrónica
           </h1>
+          
           <p className="text-xl lg:text-2xl mt-6 font-light">
             La forma más ágil que puedes encontrar en Ecuador para la emisión de comprobantes electrónicos. Desde la web o desde un dispositivo móvil.
           </p>
